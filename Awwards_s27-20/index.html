@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover btn</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="w100 grid-5-5">
+    <div id="app" class=" w100 cl11 rw11 grid-5-5">
+        <div class="liste cl11 rw11 yctr xstrt ">
+            <p v-for="item in tableaux" @mouseover='showPhoto' @mouseleave='mouseleave' v-bind="{id:item.id}">
+                {{item.title}}</p>
+        </div>
+        <div class="img_back cl11 rw11 w80 h80 xctr yctr">
+            <transition name="fade">
+                <img class="image" src="./img/Fd103392.jpg" alt="" v-if='picture == 0'>
+            </transition>
+            <transition name="fade">
+                <img class="image" src="./img/kandinsky.jpg" alt="" v-if='picture == 1'>
+            </transition>
+            <transition name="fade">
+                <img class="image" src="./img/polock.jpg" alt="" v-if='picture == 2'>
+            </transition>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="js/index.js"></script>
+
+</html>

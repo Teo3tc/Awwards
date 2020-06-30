@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+
+}
+
+#app {
+    font-size: 1.5vw;
+    overflow: hidden;
+}
+
+.liste {
+    color: white;
+    font-size: 5em;
+    font-weight: 500;
+    margin-left: 2%;
+    cursor: pointer;
+    z-index: 2;
+    mix-blend-mode: exclusion;
+}
+
+.img_back {
+    position: relative;
+}
+
+.img_back img {
+    position: absolute;
+    max-width: 100%;
+
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active below version 2.1.8 */
+    {
+    opacity: 0;
+}
