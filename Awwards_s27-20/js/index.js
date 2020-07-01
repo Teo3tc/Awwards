@@ -1,38 +1,39 @@
 const app = new Vue({
-    el: "#app",
-    data: {
-        picture: 4,
-        tableaux: [{
-                id: 0,
-                title: 'Soulage',
-                img: './img/Fd103392.jpg'
-            },
-            {
-                id: 1,
-                title: 'Kandinsky',
-                img: './img/kandinsky.jpg'
-            },
-            {
-                id: 2,
-                title: 'Polock',
-                img: './img/polock.jpg'
-            }
-
-        ]
+  el: "#app",
+  data: {
+    src: "./img/Fd103392.jpg",
+    tableaux: [
+      {
+        id: 0,
+        title: "Soulage",
+        img: "./img/Fd103392.jpg",
+      },
+      {
+        id: 1,
+        title: "Kandinsky",
+        img: "./img/kandinsky.jpg",
+      },
+      {
+        id: 2,
+        title: "Polock",
+        img: "./img/polock.jpg",
+      },
+    ],
+  },
+  methods: {
+    mouseleave: function () {
+      this.src = "";
     },
-    methods: {
-        mouseleave: function () {
-            this.picture = 4
-        },
-        showPhoto: function (e) {
+    showPhoto: function (e) {
+      let image = document.querySelector("img");
 
-            this.picture = e.target.getAttribute('id')
-
-            document.querySelector('.liste').addEventListener('mousemove', (e) => {
-                let image = document.querySelector('img');
-                image.style.transform = `translate3d(${e.clientX - 400}px, ${e.clientY - 400}px, 10px)`
-            })
-
-        }
-    }
-})
+      this.src = this.tableaux[e.target.getAttribute("id")].img;
+      image.style.visibility = "visible";
+      document.querySelector(".liste").addEventListener("mousemove", (e) => {
+        image.style.transform = `translate3d(${e.clientX - 400}px, ${
+          e.clientY - 300
+        }px, 10px)`;
+      });
+    },
+  },
+});

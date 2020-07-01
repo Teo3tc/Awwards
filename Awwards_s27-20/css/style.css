@@ -24,14 +24,19 @@ body {
     mix-blend-mode: exclusion;
 }
 
+.liste p:hover {
+    text-decoration: underline;
+}
+
 .img_back {
     position: relative;
 }
 
 .img_back img {
     position: absolute;
+    left: 60%;
     max-width: 100%;
-
+    width: 50%;
 }
 
 .fade-enter-active,
