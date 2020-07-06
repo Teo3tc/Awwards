@@ -36,7 +36,7 @@ img {
 }
 
 .first-box:hover .arrow {
-    width: 100%;
+    width: 150%;
 }
 
 .first-box__back {
@@ -87,6 +87,7 @@ img {
 .line {
     height: 1px;
     background-color: white;
+    width: 96%;
 }
 
 .line-top {
@@ -111,9 +112,10 @@ img {
     color: white;
     grid-column: 1/5;
     grid-row: 1/2;
-    font-size: 8em;
+    font-size: 15em;
     mix-blend-mode: overlay;
     transition: all 0.5s ease;
     z-index: 3;
+    line-height: 0.8;
 
 }
