@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100vw;
+
+}
+
+img {
+    width: 100%;
+}
+
+.first-box {
+    /* border: 1px solid white;*/
+    z-index: 0;
+}
+
+.first-box:hover .first-box__back {
+    transform: scale(0.98);
+}
+
+.first-box:hover .first-box__img {
+    transform: scale(1.12);
+}
+
+.first-box:hover .btn {
+    border: none;
+}
+
+.first-box:hover .arrow {
+    width: 100%;
+}
+
+.first-box__back {
+    background: #a9bcff;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.first-box__img {
+    background: blue;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    width: 35%;
+
+    -webkit-box-shadow: 11px 2px 5px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 11px 2px 5px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 11px 2px 5px -9px rgba(0, 0, 0, 0.75);
+
+}
+
+.btn {
+    position: relative;
+
+    width: 27%;
+    height: 80%;
+
+    margin-right: 30%;
+
+    border: 1px solid white;
+    border-radius: 60px;
+    z-index: 4;
+    mix-blend-mode: exclusion;
+
+    transition: all 0.5s ease;
+
+    cursor: pointer;
+
+}
+
+.arrow {
+    width: 85%;
+    /*border: 1px solid white;*/
+    transition: all 0.5s ease;
+
+}
+
+
+.line {
+    height: 1px;
+    background-color: white;
+}
+
+.line-top {
+    transform: rotate(33deg);
+    height: 1px;
+    margin-bottom: 10%;
+    width: 18%;
+    background-color: white;
+
+}
+
+.line-down {
+    transform: rotate(-33deg);
+    height: 1px;
+    margin-top: 10%;
+    width: 18%;
+    background-color: white;
+
+}
+
+.desc {
+    color: white;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    font-size: 8em;
+    mix-blend-mode: overlay;
+    transition: all 0.5s ease;
+    z-index: 3;
+
+}
