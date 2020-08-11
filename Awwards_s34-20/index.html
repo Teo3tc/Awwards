@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hover BTN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      font-family: "Work Sans", sans-serif;
+    }
+
+
+
+    body {
+      display: grid;
+    }
+
+    .box {
+      grid-template-columns: 1/-1;
+      grid-row: 1/2;
+      border: black 1px solid;
+      align-self: center;
+      justify-self: center;
+      display: grid;
+      width: 80%;
+      height: 20vh;
+    }
+
+    .btn {
+      grid-template-columns: 1/-1;
+      grid-row: 1/2;
+      display: grid;
+      grid-template: 100%/100%;
+      border: black 1px solid;
+      align-self: center;
+      justify-self: center;
+      display: grid;
+      width: 20%;
+      text-align: center;
+      /*padding: 1% 0;*/
+      border-radius: 50px;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 1% 0;
+      position: relative;
+    }
+
+    .btn {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      display: grid;
+      grid-template: 100%/100%;
+      position: relative;
+    }
+
+    .line {
+      width: 100%;
+      height: 100%;
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      justify-self: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .text {
+      grid-column: 1/-1;
+      grid-row: 1/-1;
+      justify-self: center;
+      align-self: center;
+      z-index: 2;
+      transition: color 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+      font-size: 0.6em;
+
+    }
+
+    .btn::before {
+      content: "";
+      background: black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateX(-102%);
+      opacity: 0;
+    }
+
+    .btn::after {
+      content: "";
+      background: black;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+      transform: translateX(102%);
+      opacity: 1;
+    }
+
+    .btn:hover>.text {
+      color: white;
+    }
+
+    .btn:hover::before {
+      transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+    .btn:hover::after {
+      transition: none;
+      transform: translateX(0);
+      opacity: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="btn">
+
+      <span class="text">EN SAVOIR PLUS ></span>
+      <span class="line"></span>
+
+    </div>
+  </div>
+</body>
+
+</html>
