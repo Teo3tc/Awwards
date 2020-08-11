@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        font-family: 'Rubik', sans-serif;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        font-size: 1.5vw;
+    }
+
+    .h1 {
+        text-transform: uppercase;
+        font-size: 7em;
+        font-weight: 400;
+        line-height: 0.9;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 7em;
+        font-weight: 400;
+        line-height: 0.9;
+    }
+
+    .box {
+        border: 1px solid black;
+        overflow: hidden;
+        cursor: pointer;
+
+    }
+
+    .h1__first {
+        color: black;
+    }
+
+    .box:hover .h1__first {
+        animation: check1 0.1s infinite ease-in-out;
+
+    }
+
+    .box:hover .h1__second {
+        animation: check2 0.1s infinite ease-in-out;
+
+    }
+
+    .h,
+    .a,
+    .k,
+    .y,
+    .o {
+        animation: turn 0.5s infinite ease-in-out;
+
+    }
+
+    @keyframes check1 {
+        0% {
+            transform: translateX(0%);
+
+        }
+
+        25% {
+            transform: translateX(-80%);
+
+        }
+
+        50% {
+            transform: translateX(0%);
+
+
+        }
+
+        75% {
+            transform: translateX(100%);
+
+        }
+
+        100% {
+            transform: translateX(0%);
+
+
+        }
+    }
+
+    @keyframes turn {
+
+        0% {}
+
+        100% {
+            transform: translateX(0%);
+
+
+        }
+    }
+
+    @keyframes check2 {
+        0% {
+            transform: translateX(0%);
+
+        }
+
+        25% {
+            transform: translateX(100%);
+
+        }
+
+        50% {
+            transform: translateX(0%);
+
+
+        }
+
+        75% {
+            transform: translateX(-80%);
+
+        }
+
+        100% {
+            transform: translateX(0%);
+
+
+        }
+    }
+</style>
+
+<body>
+    <div class=" grid-10x10 w100 h100">
+        <div class="cl2-7 rw2 " style="border :1px solid black">
+
+        </div>
+        <div class="box cl1-1 rw1-1 flctr grid-1x1 w10">
+
+            <div class="h1 h1__first cl1-1 rw1-1 flctr layer2 " style="mix-blend-mode: hue;">
+                <div class="h" style="transform: translateX(-80%);">H</div>
+                <div class="a" style="transform: translateX(40%);">a</div>
+                <div class="k" style="transform: translateX(-50%);">k</div>
+                <div class="y" style="transform: translateX(20%);">y</div>
+                <div class="o" style="transform: translateX(90%);">o</div>
+            </div>
+            <div class=" h1 h1__second cl1-1 rw1-1 flctr" style=" color: red;">
+                <div class="h" style="transform: translateX(40%);">H</div>
+                <div class="a" style="transform: translateX(-30%);">a</div>
+                <div class="k" style="transform: translateX(100%);">k</div>
+                <div class="y" style="transform: translateX(65%);">y</div>
+                <div class="o" style="transform: translateX(-30%);">o</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
