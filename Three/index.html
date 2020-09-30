@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tree</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid: 50% 50%/ 50% 50%;
+            overflow: hidden;
+        }
+
+        canvas {
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+        }
+
+        img {
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+            justify-self: center;
+            align-self: flex-end;
+            z-index: 2;
+            transition: all 0.4s cubic-bezier(0, 1, 0.6, 1.54);
+            transform: translateY(40%);
+            mix-blend-mode: difference;
+
+        }
+
+        /* img:hover {
+            transform: translateY(0%);
+            mix-blend-mode: normal;
+
+
+        }*/
+
+        @keyframes transformOnClick {
+            0% {
+                transform: scaleY(1);
+                transform-origin: bottom;
+            }
+
+            50% {
+                transform: scaleY(3.5);
+                transform-origin: bottom;
+
+            }
+
+            75% {
+                transform: scaleY(1);
+                transform-origin: bottom;
+            }
+
+            100% {
+                transform: translateY(-231%);
+                transform-origin: top;
+            }
+        }
+
+        .transformOnClick {
+            /*animation: transformOnClick 0.4s;*/
+            /*transform: scaleY(3.5);
+            transform-origin: bottom;*/
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="./ENTER.svg" alt="">
+</body>
+<script src="main.js"></script>
+
+</html>
